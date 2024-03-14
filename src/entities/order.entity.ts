@@ -13,8 +13,8 @@ export class Order extends Document {
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: User.name, required: false })
     partnerid: MongooseSchema.Types.ObjectId;
 
-    @Prop({ type: [{ type: MongooseSchema.Types.ObjectId, ref: Service.name }], default: [] })
-    services: MongooseSchema.Types.ObjectId[];
+    @Prop({type: MongooseSchema.Types.ObjectId, ref: Service.name, required: false })
+    service: MongooseSchema.Types.ObjectId;
 
     @Prop({ required: true })
     type: string;

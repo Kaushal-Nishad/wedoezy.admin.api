@@ -61,6 +61,27 @@ export class User extends Document{
     @Prop({ })
     wallet: number;
 
+    @Prop({  required: false })
+    lastactivityby: MongooseSchema.Types.ObjectId;
+
+    @Prop()
+    refreshToken: string;
+
+    @Prop()
+    refreshTokenweb: string;
+
+    @Prop()
+    refreshTokenmobile: string;
+
+    @Prop({ required: true, default:true})
+    isactive: boolean;
+
+    @Prop({ required: true, default:false})
+    isdeleted: boolean;
+
+    @Prop({ required: true, default:false})
+    isblocked: boolean;
+
     @Prop({ default: Date.now })
     createdAt: Date;
 

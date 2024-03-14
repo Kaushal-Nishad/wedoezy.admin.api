@@ -22,7 +22,7 @@ export class ConfigService{
 
     public async getMongoConfig(){
         return {
-            uri: 'mongodb+srv://dbkaushal:knhs321@cluster0.wwh7q.mongodb.net/wedoezy?retryWrites=true&w=majority',
+            uri: 'mongodb+srv://dbotestuser:testuser@cluster0.wwh7q.mongodb.net/wedoezy?retryWrites=true&w=majority',
             useNewUrlParser: true,
             useUnifiedTopology: true,
         };
