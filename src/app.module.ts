@@ -9,6 +9,11 @@ import { AuthModule } from './modules/auth/auth.module';
 import { UserModule } from './modules/user/user.module';
 import { PermissionModule } from './modules/permission/permission.module';
 import { UserPermissionModule } from './modules/userpermission/userpermission.module';
+import { CategoryModule } from './modules/category/category.module';
+import { EnquiryModule } from './modules/enquiry/enquiry.module';
+import { HelpCenterModule } from './modules/helpcenter/category.module';
+import { FaqModule } from './modules/faq/faq.module';
+import { BlogModule } from './modules/blog/blog.module';
 
 @Module({
   imports: [
@@ -29,7 +34,12 @@ import { UserPermissionModule } from './modules/userpermission/userpermission.mo
   AuthModule,
   UserModule,
   PermissionModule,
-  UserPermissionModule
+  UserPermissionModule,
+  CategoryModule,
+  EnquiryModule,
+  HelpCenterModule,
+  FaqModule,
+  BlogModule
   ],
   controllers: [AppController],
   providers: [AppService],

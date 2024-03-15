@@ -10,6 +10,12 @@ export class Faq extends Document {
     @Prop({ required: true })
     description: string;
 
+    @Prop({required:true, default:true})
+    isactive:boolean;
+
+    @Prop({required:true, default:false})
+    isdeleted:boolean;
+
     @Prop({ default: Date.now })
     createdAt: Date;
 

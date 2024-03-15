@@ -17,6 +17,12 @@ export class GetQueryDto{
     categorytitle: string;
 
     @IsOptional()
+    title: string;
+
+    @IsOptional()
+    name: string;
+
+    @IsOptional()
     search: string;
 
     @IsOptional()

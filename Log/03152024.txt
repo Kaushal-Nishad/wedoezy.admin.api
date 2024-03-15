@@ -1,0 +1,15 @@
+**********2024-03-15T07:07:50.833Z**********
+Path = /api/category/getbyid/65f31cab47v814925c8ce0df
+{"response":{"stringValue":"\"65f31cab47v814925c8ce0df\"","valueType":"string","kind":"ObjectId","value":"65f31cab47v814925c8ce0df","path":"_id","reason":{},"name":"CastError","message":"Cast to ObjectId failed for value \"65f31cab47v814925c8ce0df\" (type string) at path \"_id\" for model \"Category\""},"status":500,"options":{},"message":"Cast to ObjectId failed for value \"65f31cab47v814925c8ce0df\" (type string) at path \"_id\" for model \"Category\"","name":"InternalServerErrorException"}
+**********2024-03-15T07:09:17.417Z**********
+Path = /api/category/get
+{"response":{"message":"Unauthorized","statusCode":401},"status":401,"options":{},"message":"Unauthorized","name":"UnauthorizedException"}
+**********2024-03-15T08:05:49.305Z**********
+Path = /api/enquiry/create
+{"response":{"message":"Unauthorized","statusCode":401},"status":401,"options":{},"message":"Unauthorized","name":"UnauthorizedException"}
+**********2024-03-15T08:10:51.112Z**********
+Path = /api/enquiry/get
+{"response":{"message":"Cannot POST /api/enquiry/get","error":"Not Found","statusCode":404},"status":404,"options":{},"message":"Cannot POST /api/enquiry/get","name":"NotFoundException"}
+**********2024-03-15T12:55:35.407Z**********
+Path = /api/blog/get
+{"response":{"message":"Unauthorized","statusCode":401},"status":401,"options":{},"message":"Unauthorized","name":"UnauthorizedException"}

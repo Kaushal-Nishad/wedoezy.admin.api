@@ -1,0 +1,9 @@
+**********2024-03-14T15:39:24.879Z**********
+Path = /api/category/create
+{"response":{"message":"Unauthorized","statusCode":401},"status":401,"options":{},"message":"Unauthorized","name":"UnauthorizedException"}
+**********2024-03-14T15:43:35.118Z**********
+Path = /api/category/create
+{"response":{},"status":400,"options":{},"message":"Cannot read properties of undefined (reading '_id')","name":"BadRequestException"}
+**********2024-03-14T15:45:26.219Z**********
+Path = /api/category/create
+{"response":{},"status":400,"options":{},"message":"Cannot read properties of undefined (reading '_id')","name":"BadRequestException"}
