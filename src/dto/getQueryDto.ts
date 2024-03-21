@@ -54,5 +54,23 @@ export class GetQueryDto{
     category: string;
 
     @IsOptional()
+    subcategory: string;
+
+    @IsOptional()
+    innersubcategory: string;
+
+    @IsOptional()
     categoryid: MongooseSchema.Types.ObjectId;
+
+    @IsOptional()
+    subcategoryid: MongooseSchema.Types.ObjectId;
+
+    @IsOptional()
+    innersubcategoryid: MongooseSchema.Types.ObjectId;
+
+    @IsOptional()
+    ispublish: string;
+
+    @IsOptional()
+    isactive: string;
 }

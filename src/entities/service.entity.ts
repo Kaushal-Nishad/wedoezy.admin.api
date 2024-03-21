@@ -20,6 +20,9 @@ export class Service extends Document {
     title: string;
 
     @Prop({ required: true })
+    slug: string;
+
+    @Prop({ required: true })
     price: number;
 
     @Prop({ required: false })

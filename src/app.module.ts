@@ -11,9 +11,12 @@ import { PermissionModule } from './modules/permission/permission.module';
 import { UserPermissionModule } from './modules/userpermission/userpermission.module';
 import { CategoryModule } from './modules/category/category.module';
 import { EnquiryModule } from './modules/enquiry/enquiry.module';
-import { HelpCenterModule } from './modules/helpcenter/category.module';
+import { HelpCenterModule } from './modules/helpcenter/helpcenter.module';
 import { FaqModule } from './modules/faq/faq.module';
 import { BlogModule } from './modules/blog/blog.module';
+import { OurServiceModule } from './modules/ourservices/ourservice.module';
+import { CartModule } from './modules/cart/cart.module';
+import { OrderModule } from './modules/order/order.module';
 
 @Module({
   imports: [
@@ -39,7 +42,10 @@ import { BlogModule } from './modules/blog/blog.module';
   EnquiryModule,
   HelpCenterModule,
   FaqModule,
-  BlogModule
+  BlogModule,
+  OurServiceModule,
+  CartModule,
+  OrderModule
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -76,13 +76,13 @@ export class BlogRepository {
     }
 
     async update(updateBlogDto: UpdateBlogDto, session: ClientSession) {
-        // const cslug = updateBlogDto.title.replace(/\s+/g, '-').toLowerCase().trim();
+        const cslug = updateBlogDto.title.replace(/\s+/g, '-').toLowerCase().trim();
 
         const updateData = {
             title: updateBlogDto.title,
             shortdescription:updateBlogDto.shortdescription,
             description: updateBlogDto.description,
-            //content: updateBlogDto.content,
+            slug: cslug,
             imageurl: updateBlogDto.imageurl,
             image:updateBlogDto.image,
             Url:updateBlogDto.Url,

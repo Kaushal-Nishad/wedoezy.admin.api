@@ -9,7 +9,7 @@ export class Cart extends Document {
     userId: MongooseSchema.Types.ObjectId;
 
     @Prop({type: MongooseSchema.Types.ObjectId, ref: Service.name, required: true })
-    service: MongooseSchema.Types.ObjectId;
+    serviceid: MongooseSchema.Types.ObjectId;
 
     @Prop({ default: 0 })
     totalPrice: number;
@@ -19,6 +19,7 @@ export class Cart extends Document {
 
     @Prop({ default: Date.now })
     createdAt: Date;
+
 }
 
 export const CartSchema = SchemaFactory.createForClass(Cart);

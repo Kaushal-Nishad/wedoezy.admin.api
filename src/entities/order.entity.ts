@@ -1,4 +1,4 @@
-import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory, raw } from '@nestjs/mongoose';
 import { Document, Schema as MongooseSchema } from 'mongoose';
 import { User } from './user.entity';
 import { Service } from './service.entity';
@@ -13,8 +13,18 @@ export class Order extends Document {
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: User.name, required: false })
     partnerid: MongooseSchema.Types.ObjectId;
 
-    @Prop({type: MongooseSchema.Types.ObjectId, ref: Service.name, required: false })
-    service: MongooseSchema.Types.ObjectId;
+    // @Prop({type: MongooseSchema.Types.ObjectId, ref: Service.name, required: false })
+    // serviceid: MongooseSchema.Types.ObjectId;
+
+    @Prop(
+        raw([
+            {
+                serviceid: { type: MongooseSchema.Types.ObjectId, ref: Service.name, required: false },
+                title: { type: String },
+            },
+        ]),
+    )
+    orderdetails: Record<any, any>[]; 
 
     @Prop({ required: true })
     type: string;
@@ -37,17 +47,42 @@ export class Order extends Document {
     @Prop({ required: false })
     mode: string;
 
-    @Prop({ required: true })
+    @Prop({ required: false,precision:10,scale:2})
     ammount: number;
 
-    @Prop({ required: false })
+    @Prop({ required: false,precision:10,scale:2})
     subtotal: number;
 
-    @Prop({ required: false })
+    @Prop({ required: false,precision:10,scale:2})
     total: number;
 
-    @Prop({ required: false })
+    @Prop({ required: false,precision:10,scale:2})
     shipping_charge: number;
+
+    @Prop({ required: false})
+    firstname: string;
+
+    @Prop({ required: false})
+    lastname: string;
+
+    @Prop({ required: false})
+    email: string;
+
+    @Prop({ required: false})
+    phone: string;
+
+    @Prop({ required: false})
+    address: string;
+
+    @Prop({ required: false})
+    state: string;
+
+    @Prop({ required: false})
+    country: string;
+
+    @Prop({ required: false})
+    pincode: string;
+
 
     @Prop({ required: false })
     note: string;
@@ -55,8 +90,14 @@ export class Order extends Document {
     @Prop({ required: false })
     reason: string;
 
+    @Prop({ required: false })
+    city: string;
+
+    @Prop({ required: false })
+    usertype: string;
+
     @Prop({ required: true, enum: ['Pending', 'Processing', 'Completed','Cancelled'], default: 'Pending' })
-    status: string;
+    orderstatus: string;
 
     @Prop({ type: MongooseSchema.Types.ObjectId, ref: User.name, required: false })
     status_updated_by: MongooseSchema.Types.ObjectId;
@@ -67,7 +108,7 @@ export class Order extends Document {
     @Prop({ required: false })
     tranid: string;
 
-    @Prop({ required: false })
+    @Prop({ required: true})
     payment_status: string;
 
     @Prop({ required: true, default: false })

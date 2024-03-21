@@ -7,6 +7,9 @@ export class Category extends Document {
     @Prop({ required: true })
     title: string;
 
+    @Prop({ required: true })
+    slug: string;
+
     @Prop({ required: false })
     image: string;
 

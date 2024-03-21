@@ -9,7 +9,10 @@ export class SubCategory extends Document {
     categoryid: MongooseSchema.Types.ObjectId;
 
     @Prop({ required: true })
-    subcategory_name: string;
+    title: string;
+
+    @Prop({ required: true })
+    slug: string;
 
     @Prop({ required: false })
     description: string;

@@ -15,6 +15,9 @@ export class InnerSubCategory extends Document {
     @Prop({ required: true })
     title: string;
 
+    @Prop({ required: true })
+    slug: string;
+
     @Prop({ required: false })
     description: string;
 

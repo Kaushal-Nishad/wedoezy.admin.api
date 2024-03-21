@@ -44,8 +44,10 @@ export class CategoryRepository {
     }
 
     async create(createCategoryDto: CreateCategoryDto, session: ClientSession) {
+        const cslug = createCategoryDto.title.replace(/\s+/g, '-').toLowerCase().trim();
         let data = new this.categoryModel({
             title: createCategoryDto.title,
+            slug: cslug,
             image: createCategoryDto.image,
             icon_image: createCategoryDto.image,
             isactive: true,
@@ -62,8 +64,10 @@ export class CategoryRepository {
     }
 
     async update(updateCategoryDto: UpdateCategoryDto, session: ClientSession) {
+        const cslug = updateCategoryDto.title.replace(/\s+/g, '-').toLowerCase().trim();
         const updateData = {
             title: updateCategoryDto.title,
+            slug : cslug,
             image: updateCategoryDto.image,
             icon_image: updateCategoryDto.image,
             isactive: true,
