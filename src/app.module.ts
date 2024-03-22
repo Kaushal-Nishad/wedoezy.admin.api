@@ -18,6 +18,7 @@ import { OurServiceModule } from './modules/ourservices/ourservice.module';
 import { CartModule } from './modules/cart/cart.module';
 import { OrderModule } from './modules/order/order.module';
 import { TestimonialModule } from './modules/testimonial/testimonial.module';
+import { SubCategoryModule } from './modules/subcategory/subcategory.module';
 
 @Module({
   imports: [
@@ -40,6 +41,7 @@ import { TestimonialModule } from './modules/testimonial/testimonial.module';
   PermissionModule,
   UserPermissionModule,
   CategoryModule,
+  SubCategoryModule,
   EnquiryModule,
   HelpCenterModule,
   FaqModule,
