@@ -17,6 +17,7 @@ import { BlogModule } from './modules/blog/blog.module';
 import { OurServiceModule } from './modules/ourservices/ourservice.module';
 import { CartModule } from './modules/cart/cart.module';
 import { OrderModule } from './modules/order/order.module';
+import { TestimonialModule } from './modules/testimonial/testimonial.module';
 
 @Module({
   imports: [
@@ -45,7 +46,8 @@ import { OrderModule } from './modules/order/order.module';
   BlogModule,
   OurServiceModule,
   CartModule,
-  OrderModule
+  OrderModule,
+  TestimonialModule
   ],
   controllers: [AppController],
   providers: [AppService],
